@@ -1,0 +1,17 @@
+import "../Operations/Skill2ConsiderOperations.eol";
+import "../Operations/UtilOperations.eol";
+
+
+operation m2!Skill2Consider Skill2ConsiderDomainRestriction(): Boolean{
+	return not self.maxLevel() and self.hasPrerequiste();
+}
+
+
+operation getSkill2Considers(p : m2!Profile, fromList : Map, match : Boolean): Sequence{
+	if(not match) return new Sequence();
+	var key=p+"Skill2Consider";
+	if((not fromList.containsKey(key)))
+		fromList.put(key,p.skill2consider.asSequence());
+	return randSequence(fromList.get(key));
+}
+

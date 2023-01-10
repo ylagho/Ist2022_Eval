@@ -1,0 +1,7 @@
+//please write here operations that have as context mmcs!AdditionalDecor
+/*
+example
+operation AdditionalDecor operationName(params): returnType{
+ActionBlock;
+}
+*/

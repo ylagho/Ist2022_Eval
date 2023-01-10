@@ -1,0 +1,7 @@
+//please write here operations that have as context mmcs!StructuralScenario
+/*
+example
+operation StructuralScenario operationName(params): returnType{
+ActionBlock;
+}
+*/

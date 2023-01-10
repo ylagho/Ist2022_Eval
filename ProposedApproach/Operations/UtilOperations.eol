@@ -1,0 +1,31 @@
+operation followingNotMatch(l : Sequence): Boolean{
+for(i in Sequence{0..(l.size()-2)}){
+	if(l.get(i).equals(l.get(i+1))){
+		return false;
+	}
+}
+return true;
+}
+
+operation allDifferent(l: Sequence): Boolean{
+	var l1=l.asSet();
+	return l1.size()==l.size();
+}
+
+//Added to enforce Change 3
+operation oneDiff(l: Sequence) : Sequence{
+	var l1= l.asSet();
+	return l1.size()<>1;
+}
+
+operation randSequence(l: Sequence) : Sequence{
+var liste= new Sequence;
+var copy= new Sequence;
+copy.addAll(l);
+while(copy.size()>0){
+	var item=copy.random();
+	liste.add(item);
+	copy.remove(item);
+}
+return liste;
+}

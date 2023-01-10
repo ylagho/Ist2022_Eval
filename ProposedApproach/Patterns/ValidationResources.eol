@@ -1,0 +1,28 @@
+
+import "../Operations/UtilOperations.eol";
+
+
+
+
+operation validatePatternAllDiff(r0 : m2!Profile,r1 : Sequence ) :Boolean{
+	var listEq1= new Sequence;
+	for(x in r1){
+		listEq1.add(x);
+	}
+	var listEq2= new Sequence;
+	for(x in listEq1){
+		listEq2.add(x.bxskill);
+	}
+	return allDifferent(listEq2);				
+}
+operation validatePatternSuccessorDiff(r0 : m2!Profile,r1 : Sequence ) :Boolean{
+	var listEq1= new Sequence;
+	for(x in r1){
+		listEq1.add(x);
+	}
+	var listEq2= new Sequence;
+	for(x in listEq1){
+		listEq2.add(x.bxskill);
+	}
+	return followingNotMatch(listEq2);			
+}

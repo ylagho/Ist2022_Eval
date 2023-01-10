@@ -1,0 +1,7 @@
+//please write here operations that have as context mmcs!Scene
+/*
+example
+operation Scene operationName(params): returnType{
+ActionBlock;
+}
+*/

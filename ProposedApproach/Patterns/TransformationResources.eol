@@ -1,0 +1,25 @@
+
+import "../Operations/UtilOperations.eol";
+
+
+
+operation transformPattern(r0 : m2!Profile,r1 : Sequence ){
+	var s=createScenario();
+	var cs=createObjectiveScenario(r0);
+	s.conceptualscenario=cs;
+	for(s in r1){
+		cs.targetedskill.add(createTargetedSkill(s));
+	}
+}
+operation createScenario() : m1!Scenario {
+	return new m1!Scenario;
+}
+operation createObjectiveScenario(p0 : m2!Profile) : m1!ObjectiveScenario {
+	return new m1!ObjectiveScenario;
+}
+operation createTargetedSkill(p0 : m2!Skill2Consider) : m1!TargetedSkill {
+	var targetedSkill= new m1!TargetedSkill;
+	targetedSkill.bxskill=p0.bxskill;
+	targetedSkill.difficultyLevel=p0.currentLevel;
+	return targetedSkill;
+}

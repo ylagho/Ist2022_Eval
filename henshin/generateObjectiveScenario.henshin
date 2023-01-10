@@ -1,0 +1,698 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<henshin:Module xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:henshin="http://www.eclipse.org/emf/2011/Henshin" xmi:id="_M_-7wEDKEemzKd0YSh42kQ">
+  <imports href="http://escapeGameV1/1.4#/"/>
+  <units xsi:type="henshin:Rule" xmi:id="_O9vB4EDKEemzKd0YSh42kQ" name="filterProfile" description="" injectiveMatching="false">
+    <parameters xmi:id="_O9vo8EDKEemzKd0YSh42kQ" name="p" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </parameters>
+    <lhs xmi:id="_O9vo8UDKEemzKd0YSh42kQ" name="Lhs">
+      <nodes xmi:id="_O9vo8kDKEemzKd0YSh42kQ">
+        <type href="http://escapeGameV1/1.4#//Profile"/>
+      </nodes>
+    </lhs>
+    <rhs xmi:id="_O9vo80DKEemzKd0YSh42kQ" name="Rhs">
+      <nodes xmi:id="_O9vo9EDKEemzKd0YSh42kQ">
+        <type href="http://escapeGameV1/1.4#//Profile"/>
+      </nodes>
+    </rhs>
+    <mappings xmi:id="_O9vo9UDKEemzKd0YSh42kQ" origin="_O9vo8kDKEemzKd0YSh42kQ" image="_O9vo9EDKEemzKd0YSh42kQ"/>
+    <multiRules xmi:id="_O9vo9kDKEemzKd0YSh42kQ" name="sk">
+      <parameters xmi:id="_O9vo90DKEemzKd0YSh42kQ" name="p" kind="VAR">
+        <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      </parameters>
+      <lhs xmi:id="_O9vo-EDKEemzKd0YSh42kQ" name="Lhs">
+        <nodes xmi:id="_O9vo-UDKEemzKd0YSh42kQ" outgoing="_O9vo_0DKEemzKd0YSh42kQ _O9vpA0DKEemzKd0YSh42kQ">
+          <type href="http://escapeGameV1/1.4#//Profile"/>
+        </nodes>
+        <nodes xmi:id="_O9vo-kDKEemzKd0YSh42kQ" incoming="_O9vo_0DKEemzKd0YSh42kQ" outgoing="_O9vpAEDKEemzKd0YSh42kQ">
+          <type href="http://escapeGameV1/1.4#//Skill2Consider"/>
+        </nodes>
+        <nodes xmi:id="_O9vo-0DKEemzKd0YSh42kQ" incoming="_O9vpA0DKEemzKd0YSh42kQ" outgoing="_O9vpAkDKEemzKd0YSh42kQ">
+          <type href="http://escapeGameV1/1.4#//Skill2Consider"/>
+          <attributes xmi:id="_O9vo_EDKEemzKd0YSh42kQ" value="p">
+            <type href="http://escapeGameV1/1.4#//Skill2Consider/currentLevel"/>
+          </attributes>
+        </nodes>
+        <nodes xmi:id="_O9vo_UDKEemzKd0YSh42kQ" incoming="_O9vpAEDKEemzKd0YSh42kQ" outgoing="_O9vpAUDKEemzKd0YSh42kQ">
+          <type href="http://escapeGameV1/1.4#//BxSkill"/>
+        </nodes>
+        <nodes xmi:id="_O9vo_kDKEemzKd0YSh42kQ" incoming="_O9vpAkDKEemzKd0YSh42kQ _O9vpAUDKEemzKd0YSh42kQ">
+          <type href="http://escapeGameV1/1.4#//BxSkill"/>
+        </nodes>
+        <edges xmi:id="_O9vo_0DKEemzKd0YSh42kQ" source="_O9vo-UDKEemzKd0YSh42kQ" target="_O9vo-kDKEemzKd0YSh42kQ">
+          <type href="http://escapeGameV1/1.4#//Profile/skill2consider"/>
+        </edges>
+        <edges xmi:id="_O9vpAEDKEemzKd0YSh42kQ" source="_O9vo-kDKEemzKd0YSh42kQ" target="_O9vo_UDKEemzKd0YSh42kQ">
+          <type href="http://escapeGameV1/1.4#//Skill2Consider/bxskill"/>
+        </edges>
+        <edges xmi:id="_O9vpAUDKEemzKd0YSh42kQ" source="_O9vo_UDKEemzKd0YSh42kQ" target="_O9vo_kDKEemzKd0YSh42kQ">
+          <type href="http://escapeGameV1/1.4#//BxSkill/prerequisite"/>
+        </edges>
+        <edges xmi:id="_O9vpAkDKEemzKd0YSh42kQ" source="_O9vo-0DKEemzKd0YSh42kQ" target="_O9vo_kDKEemzKd0YSh42kQ">
+          <type href="http://escapeGameV1/1.4#//Skill2Consider/bxskill"/>
+        </edges>
+        <edges xmi:id="_O9vpA0DKEemzKd0YSh42kQ" source="_O9vo-UDKEemzKd0YSh42kQ" target="_O9vo-0DKEemzKd0YSh42kQ">
+          <type href="http://escapeGameV1/1.4#//Profile/skill2consider"/>
+        </edges>
+      </lhs>
+      <rhs xmi:id="_O9vpBEDKEemzKd0YSh42kQ" name="Rhs">
+        <nodes xmi:id="_O9vpBUDKEemzKd0YSh42kQ" outgoing="_O9vpDEDKEemzKd0YSh42kQ">
+          <type href="http://escapeGameV1/1.4#//Profile"/>
+        </nodes>
+        <nodes xmi:id="_O9vpBkDKEemzKd0YSh42kQ" incoming="_O9vpDEDKEemzKd0YSh42kQ" outgoing="_O9vpC0DKEemzKd0YSh42kQ">
+          <type href="http://escapeGameV1/1.4#//Skill2Consider"/>
+          <attributes xmi:id="_O9vpB0DKEemzKd0YSh42kQ" value="p">
+            <type href="http://escapeGameV1/1.4#//Skill2Consider/currentLevel"/>
+          </attributes>
+        </nodes>
+        <nodes xmi:id="_O9vpCEDKEemzKd0YSh42kQ" outgoing="_O9vpCkDKEemzKd0YSh42kQ">
+          <type href="http://escapeGameV1/1.4#//BxSkill"/>
+        </nodes>
+        <nodes xmi:id="_O9vpCUDKEemzKd0YSh42kQ" incoming="_O9vpC0DKEemzKd0YSh42kQ _O9vpCkDKEemzKd0YSh42kQ">
+          <type href="http://escapeGameV1/1.4#//BxSkill"/>
+        </nodes>
+        <edges xmi:id="_O9vpCkDKEemzKd0YSh42kQ" source="_O9vpCEDKEemzKd0YSh42kQ" target="_O9vpCUDKEemzKd0YSh42kQ">
+          <type href="http://escapeGameV1/1.4#//BxSkill/prerequisite"/>
+        </edges>
+        <edges xmi:id="_O9vpC0DKEemzKd0YSh42kQ" source="_O9vpBkDKEemzKd0YSh42kQ" target="_O9vpCUDKEemzKd0YSh42kQ">
+          <type href="http://escapeGameV1/1.4#//Skill2Consider/bxskill"/>
+        </edges>
+        <edges xmi:id="_O9vpDEDKEemzKd0YSh42kQ" source="_O9vpBUDKEemzKd0YSh42kQ" target="_O9vpBkDKEemzKd0YSh42kQ">
+          <type href="http://escapeGameV1/1.4#//Profile/skill2consider"/>
+        </edges>
+      </rhs>
+      <attributeConditions xmi:id="_O9vpDUDKEemzKd0YSh42kQ" name="test" description="" conditionText="p&lt;=2"/>
+      <mappings xmi:id="_O9vpDkDKEemzKd0YSh42kQ" origin="_O9vo-UDKEemzKd0YSh42kQ" image="_O9vpBUDKEemzKd0YSh42kQ"/>
+      <mappings xmi:id="_O9vpD0DKEemzKd0YSh42kQ" origin="_O9vo_UDKEemzKd0YSh42kQ" image="_O9vpCEDKEemzKd0YSh42kQ"/>
+      <mappings xmi:id="_O9vpEEDKEemzKd0YSh42kQ" origin="_O9vo_kDKEemzKd0YSh42kQ" image="_O9vpCUDKEemzKd0YSh42kQ"/>
+      <mappings xmi:id="_O9vpEUDKEemzKd0YSh42kQ" origin="_O9vo-0DKEemzKd0YSh42kQ" image="_O9vpBkDKEemzKd0YSh42kQ"/>
+      <multiMappings xmi:id="_O9vpEkDKEemzKd0YSh42kQ" origin="_O9vo9EDKEemzKd0YSh42kQ" image="_O9vpBUDKEemzKd0YSh42kQ"/>
+      <multiMappings xmi:id="_O9vpE0DKEemzKd0YSh42kQ" origin="_O9vo8kDKEemzKd0YSh42kQ" image="_O9vo-UDKEemzKd0YSh42kQ"/>
+    </multiRules>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_Wz67AEDKEemzKd0YSh42kQ" name="ruleAllDiff" injectiveMatching="false">
+    <parameters xmi:id="_Wz67AUDKEemzKd0YSh42kQ" name="x" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_Wz67AkDKEemzKd0YSh42kQ" name="y" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_Wz67A0DKEemzKd0YSh42kQ" name="z" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_Wz67BEDKEemzKd0YSh42kQ" name="t" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_Wz67BUDKEemzKd0YSh42kQ" name="x1" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </parameters>
+    <parameters xmi:id="_Wz67BkDKEemzKd0YSh42kQ" name="y1" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </parameters>
+    <parameters xmi:id="_Wz67B0DKEemzKd0YSh42kQ" name="z1" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </parameters>
+    <parameters xmi:id="_Wz67CEDKEemzKd0YSh42kQ" name="t1" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </parameters>
+    <parameters xmi:id="_Wz67CUDKEemzKd0YSh42kQ" name="x2" description="" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </parameters>
+    <parameters xmi:id="_Wz67CkDKEemzKd0YSh42kQ" name="y2" description="" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </parameters>
+    <parameters xmi:id="_Wz67C0DKEemzKd0YSh42kQ" name="z2" description="" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </parameters>
+    <parameters xmi:id="_Wz67DEDKEemzKd0YSh42kQ" name="t2" description="" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </parameters>
+    <lhs xmi:id="_Wz67DkDKEemzKd0YSh42kQ" name="Lhs">
+      <nodes xmi:id="_Wz67D0DKEemzKd0YSh42kQ" outgoing="_Wz67JEDKEemzKd0YSh42kQ _Wz67JUDKEemzKd0YSh42kQ _Wz67JkDKEemzKd0YSh42kQ _Wz67J0DKEemzKd0YSh42kQ">
+        <type href="http://escapeGameV1/1.4#//Profile"/>
+      </nodes>
+      <nodes xmi:id="_Wz67EEDKEemzKd0YSh42kQ" name="" incoming="_Wz67JEDKEemzKd0YSh42kQ" outgoing="_Wz67K0DKEemzKd0YSh42kQ">
+        <type href="http://escapeGameV1/1.4#//Skill2Consider"/>
+        <attributes xmi:id="_Wz67EUDKEemzKd0YSh42kQ" value="x1">
+          <type href="http://escapeGameV1/1.4#//Skill2Consider/currentLevel"/>
+        </attributes>
+        <attributes xmi:id="_Wz67EkDKEemzKd0YSh42kQ" value="x2">
+          <type href="http://escapeGameV1/1.4#//Skill2Consider/CurrentProgress"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_Wz67E0DKEemzKd0YSh42kQ" name="" incoming="_Wz67JUDKEemzKd0YSh42kQ" outgoing="_Wz67KEDKEemzKd0YSh42kQ">
+        <type href="http://escapeGameV1/1.4#//Skill2Consider"/>
+        <attributes xmi:id="_Wz67FEDKEemzKd0YSh42kQ" value="y1">
+          <type href="http://escapeGameV1/1.4#//Skill2Consider/currentLevel"/>
+        </attributes>
+        <attributes xmi:id="_Wz67FUDKEemzKd0YSh42kQ" value="y2">
+          <type href="http://escapeGameV1/1.4#//Skill2Consider/CurrentProgress"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_Wz67FkDKEemzKd0YSh42kQ" incoming="_Wz67JkDKEemzKd0YSh42kQ" outgoing="_Wz67KkDKEemzKd0YSh42kQ">
+        <type href="http://escapeGameV1/1.4#//Skill2Consider"/>
+        <attributes xmi:id="_Wz67F0DKEemzKd0YSh42kQ" value="t1">
+          <type href="http://escapeGameV1/1.4#//Skill2Consider/currentLevel"/>
+        </attributes>
+        <attributes xmi:id="_Wz67GEDKEemzKd0YSh42kQ" value="t2">
+          <type href="http://escapeGameV1/1.4#//Skill2Consider/CurrentProgress"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_Wz67GUDKEemzKd0YSh42kQ" incoming="_Wz67J0DKEemzKd0YSh42kQ" outgoing="_Wz67KUDKEemzKd0YSh42kQ">
+        <type href="http://escapeGameV1/1.4#//Skill2Consider"/>
+        <attributes xmi:id="_Wz67GkDKEemzKd0YSh42kQ" value="z1">
+          <type href="http://escapeGameV1/1.4#//Skill2Consider/currentLevel"/>
+        </attributes>
+        <attributes xmi:id="_Wz67G0DKEemzKd0YSh42kQ" value="z2">
+          <type href="http://escapeGameV1/1.4#//Skill2Consider/CurrentProgress"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_Wz67HEDKEemzKd0YSh42kQ" incoming="_Wz67KEDKEemzKd0YSh42kQ">
+        <type href="http://escapeGameV1/1.4#//BxSkill"/>
+        <attributes xmi:id="_Wz67HUDKEemzKd0YSh42kQ" value="y">
+          <type href="http://escapeGameV1/1.4#//BxSkill/targetedBx"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_Wz67HkDKEemzKd0YSh42kQ" incoming="_Wz67KUDKEemzKd0YSh42kQ">
+        <type href="http://escapeGameV1/1.4#//BxSkill"/>
+        <attributes xmi:id="_Wz67H0DKEemzKd0YSh42kQ" value="z">
+          <type href="http://escapeGameV1/1.4#//BxSkill/targetedBx"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_Wz67IEDKEemzKd0YSh42kQ" incoming="_Wz67KkDKEemzKd0YSh42kQ">
+        <type href="http://escapeGameV1/1.4#//BxSkill"/>
+        <attributes xmi:id="_Wz67IUDKEemzKd0YSh42kQ" value="t">
+          <type href="http://escapeGameV1/1.4#//BxSkill/targetedBx"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_Wz67IkDKEemzKd0YSh42kQ" incoming="_Wz67K0DKEemzKd0YSh42kQ">
+        <type href="http://escapeGameV1/1.4#//BxSkill"/>
+        <attributes xmi:id="_Wz67I0DKEemzKd0YSh42kQ" value="x">
+          <type href="http://escapeGameV1/1.4#//BxSkill/targetedBx"/>
+        </attributes>
+      </nodes>
+      <edges xmi:id="_Wz67JEDKEemzKd0YSh42kQ" source="_Wz67D0DKEemzKd0YSh42kQ" target="_Wz67EEDKEemzKd0YSh42kQ">
+        <type href="http://escapeGameV1/1.4#//Profile/skill2consider"/>
+      </edges>
+      <edges xmi:id="_Wz67JUDKEemzKd0YSh42kQ" source="_Wz67D0DKEemzKd0YSh42kQ" target="_Wz67E0DKEemzKd0YSh42kQ">
+        <type href="http://escapeGameV1/1.4#//Profile/skill2consider"/>
+      </edges>
+      <edges xmi:id="_Wz67JkDKEemzKd0YSh42kQ" source="_Wz67D0DKEemzKd0YSh42kQ" target="_Wz67FkDKEemzKd0YSh42kQ">
+        <type href="http://escapeGameV1/1.4#//Profile/skill2consider"/>
+      </edges>
+      <edges xmi:id="_Wz67J0DKEemzKd0YSh42kQ" source="_Wz67D0DKEemzKd0YSh42kQ" target="_Wz67GUDKEemzKd0YSh42kQ">
+        <type href="http://escapeGameV1/1.4#//Profile/skill2consider"/>
+      </edges>
+      <edges xmi:id="_Wz67KEDKEemzKd0YSh42kQ" source="_Wz67E0DKEemzKd0YSh42kQ" target="_Wz67HEDKEemzKd0YSh42kQ">
+        <type href="http://escapeGameV1/1.4#//Skill2Consider/bxskill"/>
+      </edges>
+      <edges xmi:id="_Wz67KUDKEemzKd0YSh42kQ" source="_Wz67GUDKEemzKd0YSh42kQ" target="_Wz67HkDKEemzKd0YSh42kQ">
+        <type href="http://escapeGameV1/1.4#//Skill2Consider/bxskill"/>
+      </edges>
+      <edges xmi:id="_Wz67KkDKEemzKd0YSh42kQ" source="_Wz67FkDKEemzKd0YSh42kQ" target="_Wz67IEDKEemzKd0YSh42kQ">
+        <type href="http://escapeGameV1/1.4#//Skill2Consider/bxskill"/>
+      </edges>
+      <edges xmi:id="_Wz67K0DKEemzKd0YSh42kQ" source="_Wz67EEDKEemzKd0YSh42kQ" target="_Wz67IkDKEemzKd0YSh42kQ" index="">
+        <type href="http://escapeGameV1/1.4#//Skill2Consider/bxskill"/>
+      </edges>
+    </lhs>
+    <rhs xmi:id="_Wz67WUDKEemzKd0YSh42kQ" name="Rhs">
+      <nodes xmi:id="_Wz67WkDKEemzKd0YSh42kQ" outgoing="_Wz67eUDKEemzKd0YSh42kQ _Wz67ekDKEemzKd0YSh42kQ _Wz67fkDKEemzKd0YSh42kQ _Wz67f0DKEemzKd0YSh42kQ">
+        <type href="http://escapeGameV1/1.4#//Profile"/>
+      </nodes>
+      <nodes xmi:id="_Wz67W0DKEemzKd0YSh42kQ" incoming="_Wz67eUDKEemzKd0YSh42kQ" outgoing="_Wz67iEDKEemzKd0YSh42kQ">
+        <type href="http://escapeGameV1/1.4#//Skill2Consider"/>
+        <attributes xmi:id="_Wz67XEDKEemzKd0YSh42kQ" value="x1">
+          <type href="http://escapeGameV1/1.4#//Skill2Consider/currentLevel"/>
+        </attributes>
+        <attributes xmi:id="_Wz67XUDKEemzKd0YSh42kQ" value="x2">
+          <type href="http://escapeGameV1/1.4#//Skill2Consider/CurrentProgress"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_Wz67XkDKEemzKd0YSh42kQ" incoming="_Wz67ekDKEemzKd0YSh42kQ" outgoing="_Wz67gEDKEemzKd0YSh42kQ">
+        <type href="http://escapeGameV1/1.4#//Skill2Consider"/>
+        <attributes xmi:id="_Wz67X0DKEemzKd0YSh42kQ" value="y1">
+          <type href="http://escapeGameV1/1.4#//Skill2Consider/currentLevel"/>
+        </attributes>
+        <attributes xmi:id="_Wz67YEDKEemzKd0YSh42kQ" value="y2">
+          <type href="http://escapeGameV1/1.4#//Skill2Consider/CurrentProgress"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_Wz67YUDKEemzKd0YSh42kQ" outgoing="_Wz67fUDKEemzKd0YSh42kQ">
+        <type href="http://escapeGameV1/1.4#//Scenario"/>
+      </nodes>
+      <nodes xmi:id="_Wz67YkDKEemzKd0YSh42kQ" incoming="_Wz67e0DKEemzKd0YSh42kQ" outgoing="_Wz67iUDKEemzKd0YSh42kQ">
+        <type href="http://escapeGameV1/1.4#//TargetedSkill"/>
+        <attributes xmi:id="_Wz67Y0DKEemzKd0YSh42kQ" value="x1">
+          <type href="http://escapeGameV1/1.4#//TargetedSkill/difficultyLevel"/>
+        </attributes>
+        <attributes xmi:id="_SlyMAEDdEemzKd0YSh42kQ" value="1">
+          <type href="http://escapeGameV1/1.4#//TargetedSkill/id"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_Wz67ZEDKEemzKd0YSh42kQ" incoming="_Wz67fEDKEemzKd0YSh42kQ" outgoing="_Wz67gUDKEemzKd0YSh42kQ">
+        <type href="http://escapeGameV1/1.4#//TargetedSkill"/>
+        <attributes xmi:id="_Wz67ZUDKEemzKd0YSh42kQ" value="y1">
+          <type href="http://escapeGameV1/1.4#//TargetedSkill/difficultyLevel"/>
+        </attributes>
+        <attributes xmi:id="_TrSbgEDdEemzKd0YSh42kQ" value="2">
+          <type href="http://escapeGameV1/1.4#//TargetedSkill/id"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_Wz67ZkDKEemzKd0YSh42kQ" incoming="_Wz67fUDKEemzKd0YSh42kQ" outgoing="_Wz67e0DKEemzKd0YSh42kQ _Wz67fEDKEemzKd0YSh42kQ _Wz67hEDKEemzKd0YSh42kQ _Wz67hUDKEemzKd0YSh42kQ">
+        <type href="http://escapeGameV1/1.4#//ObjectiveScenario"/>
+      </nodes>
+      <nodes xmi:id="_Wz67Z0DKEemzKd0YSh42kQ" incoming="_Wz67fkDKEemzKd0YSh42kQ" outgoing="_Wz67g0DKEemzKd0YSh42kQ">
+        <type href="http://escapeGameV1/1.4#//Skill2Consider"/>
+        <attributes xmi:id="_Wz67aEDKEemzKd0YSh42kQ" value="t1">
+          <type href="http://escapeGameV1/1.4#//Skill2Consider/currentLevel"/>
+        </attributes>
+        <attributes xmi:id="_Wz67aUDKEemzKd0YSh42kQ" value="t2">
+          <type href="http://escapeGameV1/1.4#//Skill2Consider/CurrentProgress"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_Wz67akDKEemzKd0YSh42kQ" incoming="_Wz67f0DKEemzKd0YSh42kQ" outgoing="_Wz67gkDKEemzKd0YSh42kQ">
+        <type href="http://escapeGameV1/1.4#//Skill2Consider"/>
+        <attributes xmi:id="_Wz67a0DKEemzKd0YSh42kQ" value="z1">
+          <type href="http://escapeGameV1/1.4#//Skill2Consider/currentLevel"/>
+        </attributes>
+        <attributes xmi:id="_Wz67bEDKEemzKd0YSh42kQ" value="z2">
+          <type href="http://escapeGameV1/1.4#//Skill2Consider/CurrentProgress"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_Wz67bUDKEemzKd0YSh42kQ" incoming="_Wz67gEDKEemzKd0YSh42kQ _Wz67gUDKEemzKd0YSh42kQ">
+        <type href="http://escapeGameV1/1.4#//BxSkill"/>
+        <attributes xmi:id="_Wz67bkDKEemzKd0YSh42kQ" value="y">
+          <type href="http://escapeGameV1/1.4#//BxSkill/targetedBx"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_Wz67b0DKEemzKd0YSh42kQ" incoming="_Wz67gkDKEemzKd0YSh42kQ _Wz67hkDKEemzKd0YSh42kQ">
+        <type href="http://escapeGameV1/1.4#//BxSkill"/>
+        <attributes xmi:id="_Wz67cEDKEemzKd0YSh42kQ" value="z">
+          <type href="http://escapeGameV1/1.4#//BxSkill/targetedBx"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_Wz67cUDKEemzKd0YSh42kQ" incoming="_Wz67g0DKEemzKd0YSh42kQ _Wz67h0DKEemzKd0YSh42kQ">
+        <type href="http://escapeGameV1/1.4#//BxSkill"/>
+        <attributes xmi:id="_Wz67ckDKEemzKd0YSh42kQ" value="t">
+          <type href="http://escapeGameV1/1.4#//BxSkill/targetedBx"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_Wz67c0DKEemzKd0YSh42kQ" incoming="_Wz67hEDKEemzKd0YSh42kQ" outgoing="_Wz67hkDKEemzKd0YSh42kQ">
+        <type href="http://escapeGameV1/1.4#//TargetedSkill"/>
+        <attributes xmi:id="_Wz67dEDKEemzKd0YSh42kQ" value="z1">
+          <type href="http://escapeGameV1/1.4#//TargetedSkill/difficultyLevel"/>
+        </attributes>
+        <attributes xmi:id="_UotGAEDdEemzKd0YSh42kQ" value="3">
+          <type href="http://escapeGameV1/1.4#//TargetedSkill/id"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_Wz67dUDKEemzKd0YSh42kQ" incoming="_Wz67hUDKEemzKd0YSh42kQ" outgoing="_Wz67h0DKEemzKd0YSh42kQ">
+        <type href="http://escapeGameV1/1.4#//TargetedSkill"/>
+        <attributes xmi:id="_Wz67dkDKEemzKd0YSh42kQ" value="t1">
+          <type href="http://escapeGameV1/1.4#//TargetedSkill/difficultyLevel"/>
+        </attributes>
+        <attributes xmi:id="_VUo-8EDdEemzKd0YSh42kQ" value="4">
+          <type href="http://escapeGameV1/1.4#//TargetedSkill/id"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_Wz67d0DKEemzKd0YSh42kQ" incoming="_Wz67iEDKEemzKd0YSh42kQ _Wz67iUDKEemzKd0YSh42kQ">
+        <type href="http://escapeGameV1/1.4#//BxSkill"/>
+        <attributes xmi:id="_Wz67eEDKEemzKd0YSh42kQ" value="x">
+          <type href="http://escapeGameV1/1.4#//BxSkill/targetedBx"/>
+        </attributes>
+      </nodes>
+      <edges xmi:id="_Wz67eUDKEemzKd0YSh42kQ" source="_Wz67WkDKEemzKd0YSh42kQ" target="_Wz67W0DKEemzKd0YSh42kQ">
+        <type href="http://escapeGameV1/1.4#//Profile/skill2consider"/>
+      </edges>
+      <edges xmi:id="_Wz67ekDKEemzKd0YSh42kQ" source="_Wz67WkDKEemzKd0YSh42kQ" target="_Wz67XkDKEemzKd0YSh42kQ">
+        <type href="http://escapeGameV1/1.4#//Profile/skill2consider"/>
+      </edges>
+      <edges xmi:id="_Wz67e0DKEemzKd0YSh42kQ" source="_Wz67ZkDKEemzKd0YSh42kQ" target="_Wz67YkDKEemzKd0YSh42kQ">
+        <type href="http://escapeGameV1/1.4#//ObjectiveScenario/targetedskill"/>
+      </edges>
+      <edges xmi:id="_Wz67fEDKEemzKd0YSh42kQ" source="_Wz67ZkDKEemzKd0YSh42kQ" target="_Wz67ZEDKEemzKd0YSh42kQ">
+        <type href="http://escapeGameV1/1.4#//ObjectiveScenario/targetedskill"/>
+      </edges>
+      <edges xmi:id="_Wz67fUDKEemzKd0YSh42kQ" source="_Wz67YUDKEemzKd0YSh42kQ" target="_Wz67ZkDKEemzKd0YSh42kQ">
+        <type href="http://escapeGameV1/1.4#//Scenario/conceptualscenario"/>
+      </edges>
+      <edges xmi:id="_Wz67fkDKEemzKd0YSh42kQ" source="_Wz67WkDKEemzKd0YSh42kQ" target="_Wz67Z0DKEemzKd0YSh42kQ">
+        <type href="http://escapeGameV1/1.4#//Profile/skill2consider"/>
+      </edges>
+      <edges xmi:id="_Wz67f0DKEemzKd0YSh42kQ" source="_Wz67WkDKEemzKd0YSh42kQ" target="_Wz67akDKEemzKd0YSh42kQ">
+        <type href="http://escapeGameV1/1.4#//Profile/skill2consider"/>
+      </edges>
+      <edges xmi:id="_Wz67gEDKEemzKd0YSh42kQ" source="_Wz67XkDKEemzKd0YSh42kQ" target="_Wz67bUDKEemzKd0YSh42kQ">
+        <type href="http://escapeGameV1/1.4#//Skill2Consider/bxskill"/>
+      </edges>
+      <edges xmi:id="_Wz67gUDKEemzKd0YSh42kQ" source="_Wz67ZEDKEemzKd0YSh42kQ" target="_Wz67bUDKEemzKd0YSh42kQ">
+        <type href="http://escapeGameV1/1.4#//TargetedSkill/bxskill"/>
+      </edges>
+      <edges xmi:id="_Wz67gkDKEemzKd0YSh42kQ" source="_Wz67akDKEemzKd0YSh42kQ" target="_Wz67b0DKEemzKd0YSh42kQ">
+        <type href="http://escapeGameV1/1.4#//Skill2Consider/bxskill"/>
+      </edges>
+      <edges xmi:id="_Wz67g0DKEemzKd0YSh42kQ" source="_Wz67Z0DKEemzKd0YSh42kQ" target="_Wz67cUDKEemzKd0YSh42kQ">
+        <type href="http://escapeGameV1/1.4#//Skill2Consider/bxskill"/>
+      </edges>
+      <edges xmi:id="_Wz67hEDKEemzKd0YSh42kQ" source="_Wz67ZkDKEemzKd0YSh42kQ" target="_Wz67c0DKEemzKd0YSh42kQ">
+        <type href="http://escapeGameV1/1.4#//ObjectiveScenario/targetedskill"/>
+      </edges>
+      <edges xmi:id="_Wz67hUDKEemzKd0YSh42kQ" source="_Wz67ZkDKEemzKd0YSh42kQ" target="_Wz67dUDKEemzKd0YSh42kQ">
+        <type href="http://escapeGameV1/1.4#//ObjectiveScenario/targetedskill"/>
+      </edges>
+      <edges xmi:id="_Wz67hkDKEemzKd0YSh42kQ" source="_Wz67c0DKEemzKd0YSh42kQ" target="_Wz67b0DKEemzKd0YSh42kQ">
+        <type href="http://escapeGameV1/1.4#//TargetedSkill/bxskill"/>
+      </edges>
+      <edges xmi:id="_Wz67h0DKEemzKd0YSh42kQ" source="_Wz67dUDKEemzKd0YSh42kQ" target="_Wz67cUDKEemzKd0YSh42kQ">
+        <type href="http://escapeGameV1/1.4#//TargetedSkill/bxskill"/>
+      </edges>
+      <edges xmi:id="_Wz67iEDKEemzKd0YSh42kQ" source="_Wz67W0DKEemzKd0YSh42kQ" target="_Wz67d0DKEemzKd0YSh42kQ">
+        <type href="http://escapeGameV1/1.4#//Skill2Consider/bxskill"/>
+      </edges>
+      <edges xmi:id="_Wz67iUDKEemzKd0YSh42kQ" source="_Wz67YkDKEemzKd0YSh42kQ" target="_Wz67d0DKEemzKd0YSh42kQ">
+        <type href="http://escapeGameV1/1.4#//TargetedSkill/bxskill"/>
+      </edges>
+    </rhs>
+    <attributeConditions xmi:id="_Wz67ikDKEemzKd0YSh42kQ" name="diff" conditionText="x!=y &amp;&amp; x!=z &amp;&amp; x!=t &amp;&amp; y!=z &amp;&amp; y!=t &amp;&amp; z!=t"/>
+    <attributeConditions xmi:id="_Wz67i0DKEemzKd0YSh42kQ" name="NotMaxLevel" description="" conditionText="(x1!=4 || x2!=2) &amp;&amp; (y1!=4 || y2!=2) &amp;&amp; (z1!=4  || z2!=2) &amp;&amp; (t1!=4  || t2!=2)"/>
+    <mappings xmi:id="_Wz67jkDKEemzKd0YSh42kQ" origin="_Wz67D0DKEemzKd0YSh42kQ" image="_Wz67WkDKEemzKd0YSh42kQ"/>
+    <mappings xmi:id="_Wz67j0DKEemzKd0YSh42kQ" origin="_Wz67EEDKEemzKd0YSh42kQ" image="_Wz67W0DKEemzKd0YSh42kQ"/>
+    <mappings xmi:id="_Wz67kEDKEemzKd0YSh42kQ" origin="_Wz67E0DKEemzKd0YSh42kQ" image="_Wz67XkDKEemzKd0YSh42kQ"/>
+    <mappings xmi:id="_Wz67kUDKEemzKd0YSh42kQ" origin="_Wz67FkDKEemzKd0YSh42kQ" image="_Wz67Z0DKEemzKd0YSh42kQ"/>
+    <mappings xmi:id="_Wz67kkDKEemzKd0YSh42kQ" origin="_Wz67GUDKEemzKd0YSh42kQ" image="_Wz67akDKEemzKd0YSh42kQ"/>
+    <mappings xmi:id="_Wz67k0DKEemzKd0YSh42kQ" origin="_Wz67HEDKEemzKd0YSh42kQ" image="_Wz67bUDKEemzKd0YSh42kQ"/>
+    <mappings xmi:id="_Wz67lEDKEemzKd0YSh42kQ" origin="_Wz67HkDKEemzKd0YSh42kQ" image="_Wz67b0DKEemzKd0YSh42kQ"/>
+    <mappings xmi:id="_Wz67lUDKEemzKd0YSh42kQ" origin="_Wz67IEDKEemzKd0YSh42kQ" image="_Wz67cUDKEemzKd0YSh42kQ"/>
+    <mappings xmi:id="_Wz67lkDKEemzKd0YSh42kQ" origin="_Wz67IkDKEemzKd0YSh42kQ" image="_Wz67d0DKEemzKd0YSh42kQ"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_KuQUQEDLEemzKd0YSh42kQ" name="ruleFolowingNotMatch" injectiveMatching="false">
+    <parameters xmi:id="_KuQUQUDLEemzKd0YSh42kQ" name="x" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_KuQUQkDLEemzKd0YSh42kQ" name="y" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_KuQUQ0DLEemzKd0YSh42kQ" name="z" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_KuQUREDLEemzKd0YSh42kQ" name="t" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <parameters xmi:id="_KuQURUDLEemzKd0YSh42kQ" name="x1" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </parameters>
+    <parameters xmi:id="_KuQURkDLEemzKd0YSh42kQ" name="y1" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </parameters>
+    <parameters xmi:id="_KuQUR0DLEemzKd0YSh42kQ" name="z1" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </parameters>
+    <parameters xmi:id="_KuQUSEDLEemzKd0YSh42kQ" name="t1" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </parameters>
+    <parameters xmi:id="_KuQUSUDLEemzKd0YSh42kQ" name="x2" description="" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </parameters>
+    <parameters xmi:id="_KuQUSkDLEemzKd0YSh42kQ" name="y2" description="" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </parameters>
+    <parameters xmi:id="_KuQUS0DLEemzKd0YSh42kQ" name="z2" description="" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </parameters>
+    <parameters xmi:id="_KuQUTEDLEemzKd0YSh42kQ" name="t2" description="" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </parameters>
+    <lhs xmi:id="_KuQUTUDLEemzKd0YSh42kQ" name="Lhs">
+      <nodes xmi:id="_KuQUTkDLEemzKd0YSh42kQ" outgoing="_KuQUY0DLEemzKd0YSh42kQ _KuQUZEDLEemzKd0YSh42kQ _KuQUZUDLEemzKd0YSh42kQ _KuQUZkDLEemzKd0YSh42kQ">
+        <type href="http://escapeGameV1/1.4#//Profile"/>
+      </nodes>
+      <nodes xmi:id="_KuQUT0DLEemzKd0YSh42kQ" name="" incoming="_KuQUY0DLEemzKd0YSh42kQ" outgoing="_KuQUakDLEemzKd0YSh42kQ">
+        <type href="http://escapeGameV1/1.4#//Skill2Consider"/>
+        <attributes xmi:id="_KuQUUEDLEemzKd0YSh42kQ" value="x1">
+          <type href="http://escapeGameV1/1.4#//Skill2Consider/currentLevel"/>
+        </attributes>
+        <attributes xmi:id="_KuQUUUDLEemzKd0YSh42kQ" value="x2">
+          <type href="http://escapeGameV1/1.4#//Skill2Consider/CurrentProgress"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_KuQUUkDLEemzKd0YSh42kQ" name="" incoming="_KuQUZEDLEemzKd0YSh42kQ" outgoing="_KuQUZ0DLEemzKd0YSh42kQ">
+        <type href="http://escapeGameV1/1.4#//Skill2Consider"/>
+        <attributes xmi:id="_KuQUU0DLEemzKd0YSh42kQ" value="y1">
+          <type href="http://escapeGameV1/1.4#//Skill2Consider/currentLevel"/>
+        </attributes>
+        <attributes xmi:id="_KuQUVEDLEemzKd0YSh42kQ" value="y2">
+          <type href="http://escapeGameV1/1.4#//Skill2Consider/CurrentProgress"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_KuQUVUDLEemzKd0YSh42kQ" incoming="_KuQUZUDLEemzKd0YSh42kQ" outgoing="_KuQUaUDLEemzKd0YSh42kQ">
+        <type href="http://escapeGameV1/1.4#//Skill2Consider"/>
+        <attributes xmi:id="_KuQUVkDLEemzKd0YSh42kQ" value="t1">
+          <type href="http://escapeGameV1/1.4#//Skill2Consider/currentLevel"/>
+        </attributes>
+        <attributes xmi:id="_KuQUV0DLEemzKd0YSh42kQ" value="t2">
+          <type href="http://escapeGameV1/1.4#//Skill2Consider/CurrentProgress"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_KuQUWEDLEemzKd0YSh42kQ" incoming="_KuQUZkDLEemzKd0YSh42kQ" outgoing="_KuQUaEDLEemzKd0YSh42kQ">
+        <type href="http://escapeGameV1/1.4#//Skill2Consider"/>
+        <attributes xmi:id="_KuQUWUDLEemzKd0YSh42kQ" value="z1">
+          <type href="http://escapeGameV1/1.4#//Skill2Consider/currentLevel"/>
+        </attributes>
+        <attributes xmi:id="_KuQUWkDLEemzKd0YSh42kQ" value="z2">
+          <type href="http://escapeGameV1/1.4#//Skill2Consider/CurrentProgress"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_KuQUW0DLEemzKd0YSh42kQ" incoming="_KuQUZ0DLEemzKd0YSh42kQ">
+        <type href="http://escapeGameV1/1.4#//BxSkill"/>
+        <attributes xmi:id="_KuQUXEDLEemzKd0YSh42kQ" value="y">
+          <type href="http://escapeGameV1/1.4#//BxSkill/targetedBx"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_KuQUXUDLEemzKd0YSh42kQ" incoming="_KuQUaEDLEemzKd0YSh42kQ">
+        <type href="http://escapeGameV1/1.4#//BxSkill"/>
+        <attributes xmi:id="_KuQUXkDLEemzKd0YSh42kQ" value="z">
+          <type href="http://escapeGameV1/1.4#//BxSkill/targetedBx"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_KuQUX0DLEemzKd0YSh42kQ" incoming="_KuQUaUDLEemzKd0YSh42kQ">
+        <type href="http://escapeGameV1/1.4#//BxSkill"/>
+        <attributes xmi:id="_KuQUYEDLEemzKd0YSh42kQ" value="t">
+          <type href="http://escapeGameV1/1.4#//BxSkill/targetedBx"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_KuQUYUDLEemzKd0YSh42kQ" incoming="_KuQUakDLEemzKd0YSh42kQ">
+        <type href="http://escapeGameV1/1.4#//BxSkill"/>
+        <attributes xmi:id="_KuQUYkDLEemzKd0YSh42kQ" value="x">
+          <type href="http://escapeGameV1/1.4#//BxSkill/targetedBx"/>
+        </attributes>
+      </nodes>
+      <edges xmi:id="_KuQUY0DLEemzKd0YSh42kQ" source="_KuQUTkDLEemzKd0YSh42kQ" target="_KuQUT0DLEemzKd0YSh42kQ">
+        <type href="http://escapeGameV1/1.4#//Profile/skill2consider"/>
+      </edges>
+      <edges xmi:id="_KuQUZEDLEemzKd0YSh42kQ" source="_KuQUTkDLEemzKd0YSh42kQ" target="_KuQUUkDLEemzKd0YSh42kQ">
+        <type href="http://escapeGameV1/1.4#//Profile/skill2consider"/>
+      </edges>
+      <edges xmi:id="_KuQUZUDLEemzKd0YSh42kQ" source="_KuQUTkDLEemzKd0YSh42kQ" target="_KuQUVUDLEemzKd0YSh42kQ">
+        <type href="http://escapeGameV1/1.4#//Profile/skill2consider"/>
+      </edges>
+      <edges xmi:id="_KuQUZkDLEemzKd0YSh42kQ" source="_KuQUTkDLEemzKd0YSh42kQ" target="_KuQUWEDLEemzKd0YSh42kQ">
+        <type href="http://escapeGameV1/1.4#//Profile/skill2consider"/>
+      </edges>
+      <edges xmi:id="_KuQUZ0DLEemzKd0YSh42kQ" source="_KuQUUkDLEemzKd0YSh42kQ" target="_KuQUW0DLEemzKd0YSh42kQ">
+        <type href="http://escapeGameV1/1.4#//Skill2Consider/bxskill"/>
+      </edges>
+      <edges xmi:id="_KuQUaEDLEemzKd0YSh42kQ" source="_KuQUWEDLEemzKd0YSh42kQ" target="_KuQUXUDLEemzKd0YSh42kQ">
+        <type href="http://escapeGameV1/1.4#//Skill2Consider/bxskill"/>
+      </edges>
+      <edges xmi:id="_KuQUaUDLEemzKd0YSh42kQ" source="_KuQUVUDLEemzKd0YSh42kQ" target="_KuQUX0DLEemzKd0YSh42kQ">
+        <type href="http://escapeGameV1/1.4#//Skill2Consider/bxskill"/>
+      </edges>
+      <edges xmi:id="_KuQUakDLEemzKd0YSh42kQ" source="_KuQUT0DLEemzKd0YSh42kQ" target="_KuQUYUDLEemzKd0YSh42kQ" index="">
+        <type href="http://escapeGameV1/1.4#//Skill2Consider/bxskill"/>
+      </edges>
+    </lhs>
+    <rhs xmi:id="_KuQUa0DLEemzKd0YSh42kQ" name="Rhs">
+      <nodes xmi:id="_KuQUbEDLEemzKd0YSh42kQ" outgoing="_KuQUi0DLEemzKd0YSh42kQ _KuQUjEDLEemzKd0YSh42kQ _KuQUkEDLEemzKd0YSh42kQ _KuQUkUDLEemzKd0YSh42kQ">
+        <type href="http://escapeGameV1/1.4#//Profile"/>
+      </nodes>
+      <nodes xmi:id="_KuQUbUDLEemzKd0YSh42kQ" incoming="_KuQUi0DLEemzKd0YSh42kQ" outgoing="_KuQUmkDLEemzKd0YSh42kQ">
+        <type href="http://escapeGameV1/1.4#//Skill2Consider"/>
+        <attributes xmi:id="_KuQUbkDLEemzKd0YSh42kQ" value="x1">
+          <type href="http://escapeGameV1/1.4#//Skill2Consider/currentLevel"/>
+        </attributes>
+        <attributes xmi:id="_KuQUb0DLEemzKd0YSh42kQ" value="x2">
+          <type href="http://escapeGameV1/1.4#//Skill2Consider/CurrentProgress"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_KuQUcEDLEemzKd0YSh42kQ" incoming="_KuQUjEDLEemzKd0YSh42kQ" outgoing="_KuQUkkDLEemzKd0YSh42kQ">
+        <type href="http://escapeGameV1/1.4#//Skill2Consider"/>
+        <attributes xmi:id="_KuQUcUDLEemzKd0YSh42kQ" value="y1">
+          <type href="http://escapeGameV1/1.4#//Skill2Consider/currentLevel"/>
+        </attributes>
+        <attributes xmi:id="_KuQUckDLEemzKd0YSh42kQ" value="y2">
+          <type href="http://escapeGameV1/1.4#//Skill2Consider/CurrentProgress"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_KuQUc0DLEemzKd0YSh42kQ" outgoing="_KuQUj0DLEemzKd0YSh42kQ">
+        <type href="http://escapeGameV1/1.4#//Scenario"/>
+      </nodes>
+      <nodes xmi:id="_KuQUdEDLEemzKd0YSh42kQ" incoming="_KuQUjUDLEemzKd0YSh42kQ" outgoing="_KuQUm0DLEemzKd0YSh42kQ">
+        <type href="http://escapeGameV1/1.4#//TargetedSkill"/>
+        <attributes xmi:id="_KuQUdUDLEemzKd0YSh42kQ" value="x1">
+          <type href="http://escapeGameV1/1.4#//TargetedSkill/difficultyLevel"/>
+        </attributes>
+        <attributes xmi:id="_fEtx4EDdEemzKd0YSh42kQ" value="1">
+          <type href="http://escapeGameV1/1.4#//TargetedSkill/id"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_KuQUdkDLEemzKd0YSh42kQ" incoming="_KuQUjkDLEemzKd0YSh42kQ" outgoing="_KuQUk0DLEemzKd0YSh42kQ">
+        <type href="http://escapeGameV1/1.4#//TargetedSkill"/>
+        <attributes xmi:id="_KuQUd0DLEemzKd0YSh42kQ" value="y1">
+          <type href="http://escapeGameV1/1.4#//TargetedSkill/difficultyLevel"/>
+        </attributes>
+        <attributes xmi:id="_fyVF0EDdEemzKd0YSh42kQ" value="2">
+          <type href="http://escapeGameV1/1.4#//TargetedSkill/id"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_KuQUeEDLEemzKd0YSh42kQ" incoming="_KuQUj0DLEemzKd0YSh42kQ" outgoing="_KuQUjUDLEemzKd0YSh42kQ _KuQUjkDLEemzKd0YSh42kQ _KuQUlkDLEemzKd0YSh42kQ _KuQUl0DLEemzKd0YSh42kQ">
+        <type href="http://escapeGameV1/1.4#//ObjectiveScenario"/>
+      </nodes>
+      <nodes xmi:id="_KuQUeUDLEemzKd0YSh42kQ" incoming="_KuQUkEDLEemzKd0YSh42kQ" outgoing="_KuQUlUDLEemzKd0YSh42kQ">
+        <type href="http://escapeGameV1/1.4#//Skill2Consider"/>
+        <attributes xmi:id="_KuQUekDLEemzKd0YSh42kQ" value="t1">
+          <type href="http://escapeGameV1/1.4#//Skill2Consider/currentLevel"/>
+        </attributes>
+        <attributes xmi:id="_KuQUe0DLEemzKd0YSh42kQ" value="t2">
+          <type href="http://escapeGameV1/1.4#//Skill2Consider/CurrentProgress"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_KuQUfEDLEemzKd0YSh42kQ" incoming="_KuQUkUDLEemzKd0YSh42kQ" outgoing="_KuQUlEDLEemzKd0YSh42kQ">
+        <type href="http://escapeGameV1/1.4#//Skill2Consider"/>
+        <attributes xmi:id="_KuQUfUDLEemzKd0YSh42kQ" value="z1">
+          <type href="http://escapeGameV1/1.4#//Skill2Consider/currentLevel"/>
+        </attributes>
+        <attributes xmi:id="_KuQUfkDLEemzKd0YSh42kQ" value="z2">
+          <type href="http://escapeGameV1/1.4#//Skill2Consider/CurrentProgress"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_KuQUf0DLEemzKd0YSh42kQ" incoming="_KuQUkkDLEemzKd0YSh42kQ _KuQUk0DLEemzKd0YSh42kQ">
+        <type href="http://escapeGameV1/1.4#//BxSkill"/>
+        <attributes xmi:id="_KuQUgEDLEemzKd0YSh42kQ" value="y">
+          <type href="http://escapeGameV1/1.4#//BxSkill/targetedBx"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_KuQUgUDLEemzKd0YSh42kQ" incoming="_KuQUlEDLEemzKd0YSh42kQ _KuQUmEDLEemzKd0YSh42kQ">
+        <type href="http://escapeGameV1/1.4#//BxSkill"/>
+        <attributes xmi:id="_KuQUgkDLEemzKd0YSh42kQ" value="z">
+          <type href="http://escapeGameV1/1.4#//BxSkill/targetedBx"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_KuQUg0DLEemzKd0YSh42kQ" incoming="_KuQUlUDLEemzKd0YSh42kQ _KuQUmUDLEemzKd0YSh42kQ">
+        <type href="http://escapeGameV1/1.4#//BxSkill"/>
+        <attributes xmi:id="_KuQUhEDLEemzKd0YSh42kQ" value="t">
+          <type href="http://escapeGameV1/1.4#//BxSkill/targetedBx"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_KuQUhUDLEemzKd0YSh42kQ" incoming="_KuQUlkDLEemzKd0YSh42kQ" outgoing="_KuQUmEDLEemzKd0YSh42kQ">
+        <type href="http://escapeGameV1/1.4#//TargetedSkill"/>
+        <attributes xmi:id="_KuQUhkDLEemzKd0YSh42kQ" value="z1">
+          <type href="http://escapeGameV1/1.4#//TargetedSkill/difficultyLevel"/>
+        </attributes>
+        <attributes xmi:id="_gyTVEEDdEemzKd0YSh42kQ" value="3">
+          <type href="http://escapeGameV1/1.4#//TargetedSkill/id"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_KuQUh0DLEemzKd0YSh42kQ" incoming="_KuQUl0DLEemzKd0YSh42kQ" outgoing="_KuQUmUDLEemzKd0YSh42kQ">
+        <type href="http://escapeGameV1/1.4#//TargetedSkill"/>
+        <attributes xmi:id="_KuQUiEDLEemzKd0YSh42kQ" value="t1">
+          <type href="http://escapeGameV1/1.4#//TargetedSkill/difficultyLevel"/>
+        </attributes>
+        <attributes xmi:id="_idQbAEDdEemzKd0YSh42kQ" value="4">
+          <type href="http://escapeGameV1/1.4#//TargetedSkill/id"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_KuQUiUDLEemzKd0YSh42kQ" incoming="_KuQUmkDLEemzKd0YSh42kQ _KuQUm0DLEemzKd0YSh42kQ">
+        <type href="http://escapeGameV1/1.4#//BxSkill"/>
+        <attributes xmi:id="_KuQUikDLEemzKd0YSh42kQ" value="x">
+          <type href="http://escapeGameV1/1.4#//BxSkill/targetedBx"/>
+        </attributes>
+      </nodes>
+      <edges xmi:id="_KuQUi0DLEemzKd0YSh42kQ" source="_KuQUbEDLEemzKd0YSh42kQ" target="_KuQUbUDLEemzKd0YSh42kQ">
+        <type href="http://escapeGameV1/1.4#//Profile/skill2consider"/>
+      </edges>
+      <edges xmi:id="_KuQUjEDLEemzKd0YSh42kQ" source="_KuQUbEDLEemzKd0YSh42kQ" target="_KuQUcEDLEemzKd0YSh42kQ">
+        <type href="http://escapeGameV1/1.4#//Profile/skill2consider"/>
+      </edges>
+      <edges xmi:id="_KuQUjUDLEemzKd0YSh42kQ" source="_KuQUeEDLEemzKd0YSh42kQ" target="_KuQUdEDLEemzKd0YSh42kQ">
+        <type href="http://escapeGameV1/1.4#//ObjectiveScenario/targetedskill"/>
+      </edges>
+      <edges xmi:id="_KuQUjkDLEemzKd0YSh42kQ" source="_KuQUeEDLEemzKd0YSh42kQ" target="_KuQUdkDLEemzKd0YSh42kQ">
+        <type href="http://escapeGameV1/1.4#//ObjectiveScenario/targetedskill"/>
+      </edges>
+      <edges xmi:id="_KuQUj0DLEemzKd0YSh42kQ" source="_KuQUc0DLEemzKd0YSh42kQ" target="_KuQUeEDLEemzKd0YSh42kQ">
+        <type href="http://escapeGameV1/1.4#//Scenario/conceptualscenario"/>
+      </edges>
+      <edges xmi:id="_KuQUkEDLEemzKd0YSh42kQ" source="_KuQUbEDLEemzKd0YSh42kQ" target="_KuQUeUDLEemzKd0YSh42kQ">
+        <type href="http://escapeGameV1/1.4#//Profile/skill2consider"/>
+      </edges>
+      <edges xmi:id="_KuQUkUDLEemzKd0YSh42kQ" source="_KuQUbEDLEemzKd0YSh42kQ" target="_KuQUfEDLEemzKd0YSh42kQ">
+        <type href="http://escapeGameV1/1.4#//Profile/skill2consider"/>
+      </edges>
+      <edges xmi:id="_KuQUkkDLEemzKd0YSh42kQ" source="_KuQUcEDLEemzKd0YSh42kQ" target="_KuQUf0DLEemzKd0YSh42kQ">
+        <type href="http://escapeGameV1/1.4#//Skill2Consider/bxskill"/>
+      </edges>
+      <edges xmi:id="_KuQUk0DLEemzKd0YSh42kQ" source="_KuQUdkDLEemzKd0YSh42kQ" target="_KuQUf0DLEemzKd0YSh42kQ">
+        <type href="http://escapeGameV1/1.4#//TargetedSkill/bxskill"/>
+      </edges>
+      <edges xmi:id="_KuQUlEDLEemzKd0YSh42kQ" source="_KuQUfEDLEemzKd0YSh42kQ" target="_KuQUgUDLEemzKd0YSh42kQ">
+        <type href="http://escapeGameV1/1.4#//Skill2Consider/bxskill"/>
+      </edges>
+      <edges xmi:id="_KuQUlUDLEemzKd0YSh42kQ" source="_KuQUeUDLEemzKd0YSh42kQ" target="_KuQUg0DLEemzKd0YSh42kQ">
+        <type href="http://escapeGameV1/1.4#//Skill2Consider/bxskill"/>
+      </edges>
+      <edges xmi:id="_KuQUlkDLEemzKd0YSh42kQ" source="_KuQUeEDLEemzKd0YSh42kQ" target="_KuQUhUDLEemzKd0YSh42kQ">
+        <type href="http://escapeGameV1/1.4#//ObjectiveScenario/targetedskill"/>
+      </edges>
+      <edges xmi:id="_KuQUl0DLEemzKd0YSh42kQ" source="_KuQUeEDLEemzKd0YSh42kQ" target="_KuQUh0DLEemzKd0YSh42kQ">
+        <type href="http://escapeGameV1/1.4#//ObjectiveScenario/targetedskill"/>
+      </edges>
+      <edges xmi:id="_KuQUmEDLEemzKd0YSh42kQ" source="_KuQUhUDLEemzKd0YSh42kQ" target="_KuQUgUDLEemzKd0YSh42kQ">
+        <type href="http://escapeGameV1/1.4#//TargetedSkill/bxskill"/>
+      </edges>
+      <edges xmi:id="_KuQUmUDLEemzKd0YSh42kQ" source="_KuQUh0DLEemzKd0YSh42kQ" target="_KuQUg0DLEemzKd0YSh42kQ">
+        <type href="http://escapeGameV1/1.4#//TargetedSkill/bxskill"/>
+      </edges>
+      <edges xmi:id="_KuQUmkDLEemzKd0YSh42kQ" source="_KuQUbUDLEemzKd0YSh42kQ" target="_KuQUiUDLEemzKd0YSh42kQ">
+        <type href="http://escapeGameV1/1.4#//Skill2Consider/bxskill"/>
+      </edges>
+      <edges xmi:id="_KuQUm0DLEemzKd0YSh42kQ" source="_KuQUdEDLEemzKd0YSh42kQ" target="_KuQUiUDLEemzKd0YSh42kQ">
+        <type href="http://escapeGameV1/1.4#//TargetedSkill/bxskill"/>
+      </edges>
+    </rhs>
+    <attributeConditions xmi:id="_KuQUnEDLEemzKd0YSh42kQ" name="followNotMatch" conditionText="x!=y &amp;&amp; y!=z &amp;&amp; z!=t"/>
+    <attributeConditions xmi:id="_KuQUnUDLEemzKd0YSh42kQ" name="NotMaxLevel" description="" conditionText="(x1!=4 || x2!=2) &amp;&amp; (y1!=4 || y2!=2) &amp;&amp; (z1!=4  || z2!=2) &amp;&amp; (t1!=4  || t2!=2)"/>
+    <mappings xmi:id="_KuQUnkDLEemzKd0YSh42kQ" origin="_KuQUTkDLEemzKd0YSh42kQ" image="_KuQUbEDLEemzKd0YSh42kQ"/>
+    <mappings xmi:id="_KuQUn0DLEemzKd0YSh42kQ" origin="_KuQUT0DLEemzKd0YSh42kQ" image="_KuQUbUDLEemzKd0YSh42kQ"/>
+    <mappings xmi:id="_KuQUoEDLEemzKd0YSh42kQ" origin="_KuQUUkDLEemzKd0YSh42kQ" image="_KuQUcEDLEemzKd0YSh42kQ"/>
+    <mappings xmi:id="_KuQUoUDLEemzKd0YSh42kQ" origin="_KuQUVUDLEemzKd0YSh42kQ" image="_KuQUeUDLEemzKd0YSh42kQ"/>
+    <mappings xmi:id="_KuQUokDLEemzKd0YSh42kQ" origin="_KuQUWEDLEemzKd0YSh42kQ" image="_KuQUfEDLEemzKd0YSh42kQ"/>
+    <mappings xmi:id="_KuQUo0DLEemzKd0YSh42kQ" origin="_KuQUW0DLEemzKd0YSh42kQ" image="_KuQUf0DLEemzKd0YSh42kQ"/>
+    <mappings xmi:id="_KuQUpEDLEemzKd0YSh42kQ" origin="_KuQUXUDLEemzKd0YSh42kQ" image="_KuQUgUDLEemzKd0YSh42kQ"/>
+    <mappings xmi:id="_KuQUpUDLEemzKd0YSh42kQ" origin="_KuQUX0DLEemzKd0YSh42kQ" image="_KuQUg0DLEemzKd0YSh42kQ"/>
+    <mappings xmi:id="_KuQUpkDLEemzKd0YSh42kQ" origin="_KuQUYUDLEemzKd0YSh42kQ" image="_KuQUiUDLEemzKd0YSh42kQ"/>
+  </units>
+  <units xsi:type="henshin:SequentialUnit" xmi:id="_fot8AEDLEemzKd0YSh42kQ" name="AllDiff" subUnits="_Wz67AEDKEemzKd0YSh42kQ"/>
+  <units xsi:type="henshin:SequentialUnit" xmi:id="_jj274EDLEemzKd0YSh42kQ" name="FollowNotMatch" subUnits="_KuQUQEDLEemzKd0YSh42kQ"/>
+  <units xsi:type="henshin:PriorityUnit" xmi:id="_myAS4EDLEemzKd0YSh42kQ" name="ChooseConstraint" description="" subUnits="_fot8AEDLEemzKd0YSh42kQ _jj274EDLEemzKd0YSh42kQ"/>
+  <units xsi:type="henshin:SequentialUnit" xmi:id="_ssIH8EDLEemzKd0YSh42kQ" name="GenereOS" subUnits="_O9vB4EDKEemzKd0YSh42kQ _myAS4EDLEemzKd0YSh42kQ"/>
+  <units xsi:type="henshin:Rule" xmi:id="_UDy2kEDnEemzKd0YSh42kQ" name="createScenario">
+    <lhs xmi:id="_UDy2kUDnEemzKd0YSh42kQ" name="Lhs"/>
+    <rhs xmi:id="_UDy2kkDnEemzKd0YSh42kQ" name="Rhs">
+      <nodes xmi:id="_UDy2k0DnEemzKd0YSh42kQ">
+        <type href="http://escapeGameV1/1.4#//Scenario"/>
+      </nodes>
+    </rhs>
+  </units>
+  <units xsi:type="henshin:SequentialUnit" xmi:id="_UDy2lEDnEemzKd0YSh42kQ" name="createScenario" subUnits="_UDy2kEDnEemzKd0YSh42kQ"/>
+</henshin:Module>

@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<project default="pattern1" xmlns:ac="antlib:net.sf.antcontrib">
+
+	<taskdef uri="antlib:net.sf.antcontrib" resource="net/sf/antcontrib/antlib.xml">
+			  <classpath>
+			    <pathelement location="${eclipse.home}\plugins\ant-contrib-1.0b3.jar"/>
+			  </classpath>
+	</taskdef>
+	
+
+	<epsilon.emf.register file="D:/eclipseModeling/workspace/IST2022/models/escapeGameV1.ecore"/>
+
+	<epsilon.emf.loadModel name="m2"
+	                       modelFile="D:/eclipseModeling/workspace/IST2022/models/profile.xmi"
+	                       metamodelUri="http://escapeGameV1/1.4"
+	                       read="true" store="false" expand="true"/>
+	<epsilon.emf.loadModel name="m1"
+	                       modelFile="D:/eclipseModeling/workspace/IST2022/models/scenario.xmi"
+	                       metamodelUri="http://escapeGameV1/1.4"
+	                       read="false" store="true" expand="true"/>
+
+
+<target name="init">
+	<property name="base" value="${basedir}"></property>
+	<ac:propertyregex property="base" input="${basedir}" override="true" regexp="\\" replace="/"/>
+	<property name="x" value="false"/>
+	<epsilon.egl  target="continue.txt"  uri="file:///${base}/printContinue.egl">
+			<uses ref="x" as="c"/>	
+	</epsilon.egl>
+</target>
+
+<target name="pattern0" depends="init" unless="${continu}">
+			<epsilon.epl src="PatternSrc/patternallDiff.epl" exportas="Pattern">
+					<model ref="m2" as="m2"/>
+					<model ref="m1" as="m1"/>
+					<exports ref="transf" as="transf"/>					
+			</epsilon.epl>
+			<epsilon.egl  target="continue.txt"  uri="file:///${base}/printContinue.egl">
+					<uses ref="transf" as="c"/>	
+			</epsilon.egl>
+			<ac:var name="continu" unset="true"/>
+			<loadfile property="continu" srcfile="continue.txt"></loadfile>
+</target>
+<target name="pattern1" depends="pattern0" unless="${continu}">
+			<epsilon.epl src="PatternSrc/patternsuccessorDiff.epl" exportas="Pattern">
+					<model ref="m2" as="m2"/>
+					<model ref="m1" as="m1"/>
+					<exports ref="transf" as="transf"/>					
+			</epsilon.epl>
+			<epsilon.egl  target="continue.txt"  uri="file:///${base}/printContinue.egl">
+					<uses ref="transf" as="c"/>	
+			</epsilon.egl>
+		<ac:var name="continu" unset="true"/>
+		<loadfile property="continu" srcfile="continue.txt"></loadfile>
+</target>
+</project>

@@ -1,0 +1,63 @@
+--Tranformation specification variant for first constraint (allDiff)
+
+module osGen;
+create scenario : mmcs from profile : mmcs;
+helper context mmcs!Skill2Consider def: matchablets() : Boolean = 
+	not self.maxLevel() and self.hasPrerequiste();
+helper context mmcs!Skill2Consider def: maxLevel() : Boolean = 
+	self.currentLevel = #EXPERT and self.CurrentProgress = #ACQUIRED;
+helper context mmcs!Skill2Consider def: hasPrerequiste() : Boolean = 
+	if self.bxskill.prerequisite.oclIsUndefined() 
+	then true
+	else 
+		if self.eContainer().containsSkillAsPreq(self.bxskill.prerequisite)
+		then true
+		else false
+		endif
+	endif;
+
+--Change the level threshold to consider a skill to be an acquired prerequisite (Change 1)
+helper context mmcs!Profile def: containsSkillAsPreq(pre : mmcs!bxSkill): Boolean =
+	self.skill2consider->asSequence()->select(x | x.bxskill.targetedBx <> pre.targetedBx and x.currentLevel >= #INTERMEDIATE)->notEmpty();
+
+helper context OclAny def: allDiff(): Boolean=
+	self->asSet()->size()=4;
+helper def : match : Boolean = true;
+
+rule createObjectiveScenario{
+	from 
+	profile : mmcs!Profile,
+	sk1 : mmcs!Skill2Consider,
+	sk2: mmcs!Skill2Consider,
+	sk3: mmcs!Skill2Consider,
+	sk4: mmcs!Skill2Consider 
+	(sk1.matchablets() and sk2.matchablets() and sk3.matchablets() and sk4.matchablets() and Sequence{sk1,sk2,sk3,sk4}.allDiff())
+	do{
+		if(thisModule.match=true){
+		thisModule.createTargetModel(profile,sk1,sk2,sk3,sk4);
+		}
+		thisModule.match<-false;
+	}	
+}
+
+rule createTargetModel(pr : mmcs!Profile, sk1 : mmcs!Skill2Consider, sk2 : mmcs!Skill2Consider, sk3 : mmcs!Skill2Consider, sk4 : mmcs!Skill2Consider ){
+	to 	
+	scen : mmcs!Scenario,
+	scenObj : mmcs!ObjectiveScenario
+do{
+		scen.conceptualscenario<-scenObj;
+		thisModule.transformSK(sk1,scenObj);
+		thisModule.transformSK(sk2,scenObj);
+		thisModule.transformSK(sk3,scenObj);
+		thisModule.transformSK(sk4,scenObj);	
+}	
+}
+rule transformSK(sk : mmcs!Skill2Consider, obSen : mmcs!ObjectiveScenario){
+	to ts : mmcs!TargetedSkill()
+do{
+	ts.difficultyLevel<-sk.currentLevel;
+	ts.bxskill<-sk.bxskill;
+	obSen.targetedskill.add(ts);
+}
+}
+

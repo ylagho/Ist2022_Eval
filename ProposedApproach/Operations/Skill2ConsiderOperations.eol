@@ -1,0 +1,22 @@
+//please write here operations that have as context mmcs!Skill2Consider
+/*
+example
+operation Skill2Consider operationName(params): returnType{
+ActionBlock;
+}
+*/
+
+import "ProfileOperations.eol";
+
+
+operation Skill2Consider maxLevel() : Boolean {
+return self.currentLevel.value = Level#EXPERT.value and self.CurrentProgress.value = Progress#ACQUIRED.value ;
+}
+
+operation Skill2Consider hasPrerequiste() : Boolean{
+return self.bxskill.prerequisite = null or self.eContainer.containsSkillAsPreq(self.bxskill.prerequisite);
+}
+
+operation Skill2Consider equals(o: Skill2Consider): Boolean{
+return self.bxskill.targetedBx=o.bxskill.targetedBx;
+}

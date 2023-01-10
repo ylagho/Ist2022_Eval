@@ -1,0 +1,57 @@
+import "../../TransformationResources.eol";
+import "../../DomainRestrictionResources.eol";
+import "../../ValidationResources.eol";
+
+pre{
+var fromList= new Map;
+var c: Integer;
+c=0;
+var it: Integer;
+it=0;
+var rand: Integer;
+var transf=false;
+var x=true;
+}
+
+pattern Pattern
+			
+ 
+			r0 : Profile  ,
+ 
+			r1 : Skill2Consider 
+				from : getSkill2Considers(r0, fromList, x)   guard : r1.Skill2ConsiderDomainRestriction() ,
+			
+			
+ 
+			r2 : Skill2Consider 
+				from : getSkill2Considers(r0, fromList, x)   guard : r2.Skill2ConsiderDomainRestriction() ,
+			
+			
+ 
+			r3 : Skill2Consider 
+				from : getSkill2Considers(r0, fromList, x)   guard : r3.Skill2ConsiderDomainRestriction() ,
+			
+ 
+			r4 : Skill2Consider 
+				from : getSkill2Considers(r0, fromList, x)   guard : r4.Skill2ConsiderDomainRestriction() 
+{
+match:x=true and validatePatternSuccessorDiff(r0,Sequence{r1,r2,r3,r4})
+onmatch
+	{
+		x=false;
+	}
+	do{
+			
+			transformPattern(r0,Sequence{r1,r2,r3,r4});
+			transf=true;		
+	}
+}
+
+
+
+
+
+post{
+}
+
+
